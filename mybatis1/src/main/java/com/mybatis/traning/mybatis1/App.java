@@ -15,9 +15,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
  */
 public class App 
 {
-    public static void main( String[] args ) throws IOException 
-    {
-        System.out.println( "Hello World!sss" );
+    public static void main( String[] args ) throws IOException     {
+        System.out.println( "jjHello World!sss" );
         
         String resource = "mybatis-config.xml";
         System.out.println( "Hello World!" );
