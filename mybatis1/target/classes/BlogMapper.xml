@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.traning.mybatis1.BlogMapper">
+  <select id="selectBlog" parameterType="int" resultType="com.mybatis.traning.mybatis1.Blog">
+    select * from blog where id = #{id}
+  </select>
+  
+  <update id="updateBlog" parameterType="com.mybatis.traning.mybatis1.Blog">
+   update blog set blog = #{blog} where id = #{id}
+</update>
+
+<insert id="insertBlog" parameterType="com.mybatis.traning.mybatis1.Blog" useGeneratedKeys="true"
+    keyProperty="id">
+  insert into blog (id ,blog)
+  values (#{id},#{blog})
+</insert>
+</mapper>
